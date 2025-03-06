@@ -52,7 +52,7 @@ export default function Dashboard() {
   )
 }
 
-function NavButton({ icon, label, isActive, onClick }) {
+function NavButton({ icon, label, isActive, onClick }: { icon: React.ReactNode, label: string, isActive: boolean, onClick: () => void }) {
   return (
     <button
       onClick={onClick}
@@ -79,7 +79,7 @@ function HomePage() {
   )
 }
 
-function DashboardButton({ icon, label }) {
+function DashboardButton({ icon, label }: { icon: React.ReactNode, label: string }) {
   return (
     <Card className="flex flex-col items-center justify-center p-24 h-64 hover:bg-accent transition-colors">
       <div className="bg-primary/10 p-6 rounded-full mb-6">
