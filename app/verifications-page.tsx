@@ -42,72 +42,129 @@ const pendingVerifications = [
       { title: "Tiempo estimado", content: "3-5 días hábiles" },
     ],
     imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF0100_Verificación.png"
-  },
-  {
-    id: "ver-002",
-    title: "Certificado Power BI",
-    status: "pending",
-    date: "2025-03-12",
-    type: "Insignia Externa",
-    issuer: "Microsoft",
-    details: [
-      { title: "Certificación", content: "Microsoft Power BI Data Analyst" },
-      { title: "Fecha de solicitud", content: "12 de marzo de 2025" },
-      { title: "Estatus", content: "Esperando validación" },
-      { title: "Tiempo estimado", content: "5-7 días hábiles" },
-    ],
-    imageSrc: "/TecLearnerWallet_Mockup/Insignias Externos/PowerBI_Verificación.png"
   }
 ]
 
 const completedVerifications = [
   {
-    id: "ver-003",
-    title: "Título Profesional - IFI",
+    id: "ver-009",
+    title: "Verificación Accredible - Power BI",
     status: "verified",
-    date: "2025-02-15",
-    type: "Título Académico",
-    issuer: "Tecnológico de Monterrey / SEP",
+    date: "2022-11-15",
+    type: "Insignia Externa",
+    issuer: "Microsoft Learning",
     details: [
-      { title: "Documento", content: "Título de Ingeniero Físico Industrial" },
-      { title: "Fecha de verificación", content: "15 de febrero de 2025" },
-      { title: "ID de verificación", content: "VER-TIT-2025-02-1234" },
-      { title: "Estado", content: "Verificado y válido" },
-      { title: "Tecnología", content: "Blockchain Ethereum" },
+      { title: "Emisor", content: "Microsoft Learning" },
+      { title: "Fecha de emisión", content: "15 de noviembre de 2022" },
+      { title: "Plataforma", content: "Accredible Certification Platform" },
+      { title: "Estado", content: "Activo y verificado" },
     ],
-    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Titulo_Verificacion.png"
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Externos/PowerBI_Accredible.png"
+  },
+  {
+    id: "ver-010",
+    title: "Verificación de Certificación Power BI",
+    status: "verified",
+    date: "2022-11-15",
+    type: "Insignia Externa",
+    issuer: "Microsoft Certification",
+    details: [
+      { title: "Emisor", content: "Microsoft Certification" },
+      { title: "Fecha de verificación", content: "15 de noviembre de 2022" },
+      { title: "ID de verificación", content: "VER-PBI-2022-11" },
+      { title: "Estado", content: "Verificado y válido" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Externos/PowerBI_Verificación.png"
+  },
+  {
+    id: "ver-003",
+    title: "Certificado Blockchain del Título",
+    status: "verified",
+    date: "2022-07-01",
+    type: "Título Académico",
+    issuer: "Instituto Tecnológico y de Estudios Superiores de Monterrey",
+    details: [
+      { title: "Emisor", content: "Instituto Tecnológico y de Estudios Superiores de Monterrey" },
+      { title: "Fecha de emisión", content: "Julio 2022" },
+      { title: "Tecnología", content: "Blockcerts v2.0" },
+      { title: "Estado", content: "Verificado y válido" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Titulo_Blockcerts.png"
   },
   {
     id: "ver-004",
-    title: "Certificado en Psicología Positiva",
+    title: "Verificación de Título Profesional",
     status: "verified",
-    date: "2025-01-20",
-    type: "Educación Continua",
-    issuer: "Tecnológico de Monterrey - Educación Continua",
+    date: "2022-07-15",
+    type: "Título Académico",
+    issuer: "Secretaría de Educación Pública",
     details: [
-      { title: "Curso", content: "Psicología Positiva para el Bienestar" },
-      { title: "Fecha de verificación", content: "20 de enero de 2025" },
-      { title: "ID de verificación", content: "EC-PSI-POS-2025-01" },
+      { title: "Institución verificadora", content: "Secretaría de Educación Pública" },
+      { title: "Fecha de verificación", content: "Julio 2022" },
+      { title: "ID de verificación", content: "VER-2022-07-15-001" },
+      { title: "Estado", content: "Documento auténtico y válido" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Titulo_Verificación.png"
+  },
+  {
+    id: "ver-005",
+    title: "Verificación de Certificado en Psicología Positiva",
+    status: "verified",
+    date: "2023-01-15",
+    type: "Educación Continua",
+    issuer: "Tecnológico de Monterrey",
+    details: [
+      { title: "Emisor", content: "Tecnológico de Monterrey" },
+      { title: "Fecha de verificación", content: "Enero 2023" },
+      { title: "ID de verificación", content: "VER-PP-2023-01" },
       { title: "Estado", content: "Verificado y válido" },
-      { title: "Validez", content: "Permanente" },
     ],
     imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Verificación.png"
   },
   {
-    id: "ver-005",
-    title: "Colaboración Efectiva",
+    id: "ver-006",
+    title: "Verificación de Certificado en Colaboración Efectiva",
     status: "verified",
-    date: "2024-11-05",
+    date: "2023-03-15",
     type: "Educación Continua",
-    issuer: "Tecnológico de Monterrey - Educación Continua",
+    issuer: "Tecnológico de Monterrey",
     details: [
-      { title: "Curso", content: "Colaboración Efectiva en Entornos Digitales" },
-      { title: "Fecha de verificación", content: "5 de noviembre de 2024" },
-      { title: "ID de verificación", content: "EC-COL-EFE-2024-11" },
+      { title: "Emisor", content: "Tecnológico de Monterrey" },
+      { title: "Fecha de verificación", content: "Marzo 2023" },
+      { title: "ID de verificación", content: "VER-CE-2023-03" },
       { title: "Estado", content: "Verificado y válido" },
-      { title: "Plataforma", content: "Blockchain Tec" },
     ],
     imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Verificación.png"
+  },
+  {
+    id: "ver-007",
+    title: "Credencial Accredible - Psicología Positiva",
+    status: "verified",
+    date: "2023-01-10",
+    type: "Educación Continua",
+    issuer: "Tecnológico de Monterrey",
+    details: [
+      { title: "Emisor", content: "Tecnológico de Monterrey" },
+      { title: "Fecha de emisión", content: "Enero 2023" },
+      { title: "Plataforma", content: "Accredible Certification Platform" },
+      { title: "Estado", content: "Activo y verificado" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Accredible.png"
+  },
+  {
+    id: "ver-008",
+    title: "Credencial Accredible - Colaboración Efectiva",
+    status: "verified",
+    date: "2023-03-10",
+    type: "Educación Continua",
+    issuer: "Tecnológico de Monterrey",
+    details: [
+      { title: "Emisor", content: "Tecnológico de Monterrey" },
+      { title: "Fecha de emisión", content: "Marzo 2023" },
+      { title: "Plataforma", content: "Accredible Certification Platform" },
+      { title: "Estado", content: "Activo y verificado" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Accredible.png"
   }
 ]
 

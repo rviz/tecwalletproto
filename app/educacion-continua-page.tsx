@@ -18,9 +18,9 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Insignia.png"
-          alt="Psicología Positiva"
+          alt=""
           info={{
-            title: "Certificado en Psicología Positiva",
+            title: "Psicología positiva y propósito de vida",
             description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "40 horas" },
@@ -35,9 +35,9 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
         />
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Insignia.png"
-          alt="Colaboración Efectiva"
+          alt=""
           info={{
-            title: "Certificado en Colaboración Efectiva",
+            title: "Colaboración y negociación efectiva",
             description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "30 horas" },
@@ -51,67 +51,11 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
           }}
         />
         <PhotoCard
-          src="/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Verificación.png"
-          alt="Verificación Psicología Positiva"
-          info={{
-            title: "Verificación de Certificado en Psicología Positiva",
-            description: "Comprobante de validez oficial",
-            details: [
-              { title: "Emisor", content: "Tecnológico de Monterrey" },
-              { title: "Fecha de verificación", content: "Enero 2023" },
-              { title: "ID de verificación", content: "VER-PP-2023-01" },
-              { title: "Estado", content: "Verificado y válido" },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Verificación.png"
-          alt="Verificación Colaboración Efectiva"
-          info={{
-            title: "Verificación de Certificado en Colaboración Efectiva",
-            description: "Comprobante de validez oficial",
-            details: [
-              { title: "Emisor", content: "Tecnológico de Monterrey" },
-              { title: "Fecha de verificación", content: "Marzo 2023" },
-              { title: "ID de verificación", content: "VER-CE-2023-03" },
-              { title: "Estado", content: "Verificado y válido" },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Accredible.png"
-          alt="Accredible Psicología Positiva"
-          info={{
-            title: "Credencial Accredible - Psicología Positiva",
-            description: "Plataforma Accredible de verificación",
-            details: [
-              { title: "Emisor", content: "Tecnológico de Monterrey" },
-              { title: "Fecha de emisión", content: "Enero 2023" },
-              { title: "Plataforma", content: "Accredible Certification Platform" },
-              { title: "Estado", content: "Activo y verificado" },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Accredible.png"
-          alt="Accredible Colaboración Efectiva"
-          info={{
-            title: "Credencial Accredible - Colaboración Efectiva",
-            description: "Plataforma Accredible de verificación",
-            details: [
-              { title: "Emisor", content: "Tecnológico de Monterrey" },
-              { title: "Fecha de emisión", content: "Marzo 2023" },
-              { title: "Plataforma", content: "Accredible Certification Platform" },
-              { title: "Estado", content: "Activo y verificado" },
-            ],
-          }}
-        />
-        <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/effective-leader.png"
-          alt="Effective Leader"
+          alt=""
           info={{
-            title: "Certificado en Liderazgo Efectivo",
-            description: "Tecnológico de Monterrey - Educación Ejecutiva",
+            title: "Effective Leader Essentials",
+            description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "60 horas" },
               { title: "Fecha de emisión", content: "Mayo 2023" },
@@ -125,10 +69,10 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
         />
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/Project-Manager-Essentials.png"
-          alt="Project Manager Essentials"
+          alt=""
           info={{
-            title: "Certificado en Gestión de Proyectos",
-            description: "Tecnológico de Monterrey - Educación Ejecutiva",
+            title: "Project Manager Essentials",
+            description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "50 horas" },
               { title: "Fecha de emisión", content: "Junio 2023" },
@@ -142,10 +86,10 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
         />
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/Marketing-Specialist--Fundamentals.png"
-          alt="Marketing Specialist Fundamentals"
+          alt=""
           info={{
-            title: "Certificado en Fundamentos de Marketing",
-            description: "Tecnológico de Monterrey - Educación Ejecutiva",
+            title: "Marketing Specialist Fundamentals",
+            description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "40 horas" },
               { title: "Fecha de emisión", content: "Agosto 2023" },
@@ -159,10 +103,10 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
         />
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/DATA-2.png"
-          alt="Data Analytics"
+          alt=""
           info={{
-            title: "Certificado en Análisis de Datos",
-            description: "Tecnológico de Monterrey - Educación Ejecutiva",
+            title: "Análisis Básico de Datos Utilizando Power BI",
+            description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "55 horas" },
               { title: "Fecha de emisión", content: "Septiembre 2023" },
@@ -176,10 +120,10 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
         />
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/FINANZAS.png"
-          alt="Finanzas para No Financieros"
+          alt=""
           info={{
-            title: "Certificado en Finanzas para No Financieros",
-            description: "Tecnológico de Monterrey - Educación Ejecutiva",
+            title: "Fundamentos y Visión Financiera",
+            description: "Tecnológico de Monterrey - Educación Continua",
             details: [
               { title: "Duración", content: "45 horas" },
               { title: "Fecha de emisión", content: "Julio 2023" },

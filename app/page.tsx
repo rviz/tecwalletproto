@@ -47,9 +47,6 @@ export default function Dashboard() {
           <h1 className="text-6xl font-bold">Tec Learner Wallet</h1>
           <p className="text-3xl text-white/80 mt-2">Credenciales Académicas</p>
         </div>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-[#5A43E5] h-20 w-20 rounded-full">
-          <Bell size={40} />
-        </Button>
       </div>
 
       {/* Main Content */}
@@ -66,6 +63,12 @@ export default function Dashboard() {
       {/* Bottom Navigation - Mobile App Style */}
       <div className="fixed bottom-0 left-0 right-0 max-w-4xl mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-t-5xl shadow-lg">
         <div className="flex justify-around items-center h-32 px-4">
+        <NavButton
+            icon={<FileCheck size={48} />}
+            label="Verificaciones"
+            isActive={activeTab === "verifications"}
+            onClick={() => handleTabChange("verifications")}
+          />
           <NavButton
             icon={<Home size={48} />}
             label="Inicio"
@@ -77,12 +80,6 @@ export default function Dashboard() {
             label="Perfil"
             isActive={activeTab === "profile"}
             onClick={() => handleTabChange("profile")}
-          />
-          <NavButton
-            icon={<FileCheck size={48} />}
-            label="Verificaciones"
-            isActive={activeTab === "verifications"}
-            onClick={() => handleTabChange("verifications")}
           />
         </div>
       </div>

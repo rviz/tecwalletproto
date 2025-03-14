@@ -51,40 +51,6 @@ export default function TitulosAcademicosPage({ onBack }: TitulosAcademicosPageP
             ],
           }}
         />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Título Universitario/Titulo_Blockcerts.png"
-          alt="Certificado Blockchain"
-          info={{
-            title: "Certificado Blockchain del Título Profesional",
-            description: "Verificación digital mediante Blockcerts",
-            details: [
-              { title: "Emisor", content: "Instituto Tecnológico y de Estudios Superiores de Monterrey" },
-              { title: "Fecha de emisión", content: "Julio 2022" },
-              { title: "Tecnología", content: "Blockcerts v2.0" },
-              { 
-                title: "Estado", 
-                content: "Verificado y válido" 
-              },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Título Universitario/Titulo_Verificación.png"
-          alt="Verificación de Título"
-          info={{
-            title: "Verificación de Título Profesional",
-            description: "Comprobante de validez oficial",
-            details: [
-              { title: "Institución verificadora", content: "Secretaría de Educación Pública" },
-              { title: "Fecha de verificación", content: "Julio 2022" },
-              { title: "ID de verificación", content: "VER-2022-07-15-001" },
-              { 
-                title: "Estado", 
-                content: "Documento auténtico y válido" 
-              },
-            ],
-          }}
-        />
       </div>
     </div>
   )
