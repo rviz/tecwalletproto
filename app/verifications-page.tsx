@@ -172,7 +172,7 @@ export default function VerificationsPage({ onBack }: VerificationsPageProps) {
   const [selectedVerification, setSelectedVerification] = useState<any | null>(null)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [imageDialogOpen, setImageDialogOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState("pending")
+  const [activeTab, setActiveTab] = useState("completed")
 
   const handleVerificationClick = (verification: any) => {
     setSelectedVerification(verification)
