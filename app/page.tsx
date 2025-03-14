@@ -1,25 +1,23 @@
 "use client"
 
 import { useState } from "react"
-import { Home, User, Wallet, BarChart2, Settings, Send } from "lucide-react"
-import Image from "next/image"
+import { Home, User, Wallet, Bell, FileCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer"
+import HomePage from "./home-page"
+import TitulosAcademicosPage from "./titulos-academicos-page"
+import InsigniasAcademicasPage from "./insignias-academicas-page"
+import EducacionContinuaPage from "./educacion-continua-page"
+import InsigniasExternasPage from "./insignias-externas-page"
+import ProfilePage from "./profile-page"
+import VerificationsPage from "./verifications-page"
+import { NavButton } from "./components/nav-button"
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState("home")
-  const [activePage, setActivePage] = useState(null)
+  const [activeTab, setActiveTab] = useState<string>("home")
+  const [activePage, setActivePage] = useState<string | null>(null)
+
   // Handle navigation from dashboard buttons
-  const handleNavigate = (page) => {
+  const handleNavigate = (page: string) => {
     setActivePage(page)
     // If we're not on the home tab, switch to it
     if (activeTab !== "home") {
@@ -27,53 +25,64 @@ export default function Dashboard() {
     }
   }
 
+  // Handle back button click
+  const handleBack = () => {
+    setActivePage(null)
+  }
+
   // Reset active page when switching tabs
-  const handleTabChange = (tab) => {
+  const handleTabChange = (tab: string) => {
     setActiveTab(tab)
     setActivePage(null)
   }
 
   return (
-    
-    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 border-32 border-black">
+    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 max-w-4xl mx-auto relative overflow-hidden">
+      {/* Status Bar - Mobile App Style */}
+      <div className="bg-[#452BE0] h-12 w-full"></div>
+      
       {/* Top Bar */}
-      <div className="bg-[#452BE0] text-white p-20 flex justify-between items-center">
-        <h1 className="text-6xl font-bold">Tec Learner Wallet</h1>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-[#5A43E5] h-16 w-16">
+      <div className="bg-[#452BE0] text-white p-8 flex justify-between items-center">
+        <div>
+          <h1 className="text-6xl font-bold">Tec Learner Wallet</h1>
+          <p className="text-3xl text-white/80 mt-2">Credenciales Académicas</p>
+        </div>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-[#5A43E5] h-20 w-20 rounded-full">
+          <Bell size={40} />
         </Button>
       </div>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto p-8">
+      <main className="flex-1 overflow-auto p-8 pb-40">
         {activeTab === "home" && !activePage && <HomePage onNavigate={handleNavigate} />}
-        {activeTab === "home" && activePage === "analytics" && <AnalyticsPage />}
-        {activeTab === "home" && activePage === "settings" && <SettingsPage />}
-        {activeTab === "home" && activePage === "transfer" && <TransferPage />}
-        {activeTab === "home" && activePage === "payments" && <PaymentsPage />}
-        {activeTab === "profile" && <ProfilePage />}
-        {activeTab === "wallet" && <WalletPage />}
+        {activeTab === "home" && activePage === "titulos-academicos" && <TitulosAcademicosPage onBack={handleBack} />}
+        {activeTab === "home" && activePage === "insignias-academicas" && <InsigniasAcademicasPage onBack={handleBack} />}
+        {activeTab === "home" && activePage === "educacion-continua" && <EducacionContinuaPage onBack={handleBack} />}
+        {activeTab === "home" && activePage === "insignias-externas" && <InsigniasExternasPage onBack={handleBack} />}
+        {activeTab === "profile" && <ProfilePage onBack={() => handleTabChange("home")} />}
+        {activeTab === "verifications" && <VerificationsPage onBack={() => handleTabChange("home")} />}
       </main>
 
-      {/* Bottom Navigation */}
-      <div className="border-t-4 border-gray-200 dark:border-gray-800 bg-background">
-        <div className="flex justify-around items-center h-32">
+      {/* Bottom Navigation - Mobile App Style */}
+      <div className="fixed bottom-0 left-0 right-0 max-w-4xl mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-t-5xl shadow-lg">
+        <div className="flex justify-around items-center h-32 px-4">
           <NavButton
             icon={<Home size={48} />}
-            label="Home"
+            label="Inicio"
             isActive={activeTab === "home"}
-            onClick={() => setActiveTab("home")}
+            onClick={() => handleTabChange("home")}
           />
           <NavButton
             icon={<User size={48} />}
-            label="Profile"
+            label="Perfil"
             isActive={activeTab === "profile"}
-            onClick={() => setActiveTab("home")}
+            onClick={() => handleTabChange("profile")}
           />
           <NavButton
-            icon={<Wallet size={48} />}
-            label="Wallet"
-            isActive={activeTab === "wallet"}
-            onClick={() => setActiveTab("home")}
+            icon={<FileCheck size={48} />}
+            label="Verificaciones"
+            isActive={activeTab === "verifications"}
+            onClick={() => handleTabChange("verifications")}
           />
         </div>
       </div>
@@ -81,92 +90,5 @@ export default function Dashboard() {
   )
 }
 
-function NavButton({ icon, label, isActive, onClick }: { icon: React.ReactNode, label: string, isActive: boolean, onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`flex flex-col items-center justify-center w-full h-full ${
-        isActive ? "text-primary" : "text-muted-foreground"
-      }`}
-    >
-      {icon}
-      <span className="text-2xl mt-2 font-medium">{label}</span>
-    </button>
-  )
-}
+export { PhotoCard } from "./components/photo-card"
 
-function HomePage() {
-  return (
-    <div className="h-full flex flex-col">
-      <div className="grid grid-cols-2 gap-8 mt-8">
-        <DashboardButton icon={<BarChart2 size={64} />} label="Título y grados académicos" />
-        <DashboardButton icon={<Settings size={64} />} label="Insignias y diplomas académicos" />
-        <DashboardButton icon={<Send size={64} />} label="Educación continua" />
-        <DashboardButton icon={<Wallet size={64} />} label="Insignias y dsimplomas externos" />
-      </div>
-    </div>
-  )
-}
-
-function DashboardButton({ icon, label }: { icon: React.ReactNode, label: string }) {
-  return (
-    <Card className="flex flex-col items-center justify-center p-24 h-96 hover:bg-accent transition-colors">
-      <div className="bg-primary/10 p-6 rounded-full mb-6">
-        <div className="text-primary">{icon}</div>
-      </div>
-      <span className="font-medium text-3xl">{label}</span>
-    </Card>
-  )
-}
-
-function PhotoCard({ src, alt, info }) {
-  const [open, setOpen] = useState(false)
-
-  return (
-    <>
-      <Card className="overflow-hidden cursor-pointer" onClick={() => setOpen(true)}>
-        <div className="relative h-96 w-full">
-          <Image src={src || "/placeholder.svg"} alt={alt} fill className="object-cover" />
-        </div>
-        <div className="p-6">
-          <h3 className="text-2xl font-semibold">{alt}</h3>
-          <p className="text-xl text-muted-foreground mt-2">Click to view details</p>
-        </div>
-      </Card>
-
-      <Drawer open={open} onOpenChange={setOpen}>
-        <DrawerContent className="max-h-[85vh]">
-          <div className="mx-auto w-full max-w-4xl">
-            <DrawerHeader>
-              <DrawerTitle className="text-3xl">{info.title}</DrawerTitle>
-              <DrawerDescription className="text-xl">{info.description}</DrawerDescription>
-            </DrawerHeader>
-            <div className="p-6">
-              <div className="relative h-96 w-full mb-6">
-                <Image src={src || "/placeholder.svg"} alt={alt} fill className="object-cover rounded-lg" />
-              </div>
-              <div className="space-y-4">
-                {info.details.map((detail, index) => (
-                  <div key={index} className="border-b pb-4">
-                    <h4 className="text-2xl font-medium">{detail.title}</h4>
-                    <p className="text-xl text-muted-foreground">{detail.content}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <DrawerFooter>
-              <Button className="text-xl py-6">Take Action</Button>
-              <DrawerClose asChild>
-                <Button variant="outline" className="text-xl py-6">
-                  Close
-                </Button>
-              </DrawerClose>
-            </DrawerFooter>
-          </div>
-        </DrawerContent>
-      </Drawer>
-    </>
-  )
-}
-
-export { PhotoCard }
