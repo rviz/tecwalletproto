@@ -90,5 +90,3 @@ export default function Dashboard() {
   )
 }
 
-export { PhotoCard } from "./components/photo-card"
-
