@@ -35,7 +35,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="h-full flex flex-col">
       <h2 className="text-4xl font-semibold mb-8">Mis Credenciales</h2>
-      <div className="grid grid-cols-2 gap-12">
+      <div className="grid grid-cols-2 gap-6">
         <DashboardButton 
           icon={<GraduationCap size={64} />} 
           label="Títulos Académicos" 

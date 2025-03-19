@@ -47,13 +47,13 @@ export function PhotoCard({ src, alt, info }: PhotoCardProps) {
         <CardContent className="p-0">
           <div className="relative h-80 w-full aspect-square">
             <Image src={src || "/placeholder.svg"} alt={alt} fill className="object-contain" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent"></div>
+            <div className="absolute inset-0"></div>
             <h3 className="absolute bottom-4 left-6 text-white text-3xl font-medium">{alt}</h3>
           </div>
-          <div className="p-6 flex justify-between items-center">
+          {/* <div className="px-4 flex justify-between items-center">
             <p className="text-xl text-muted-foreground">Ver detalles</p>
             <ChevronRight className="h-8 w-8 text-muted-foreground" />
-          </div>
+          </div> */}
         </CardContent>
       </Card>
 
