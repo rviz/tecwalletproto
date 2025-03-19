@@ -17,55 +17,16 @@ export default function InsigniasAcademicasPage({ onBack }: InsigniasAcademicasP
       <h2 className="text-4xl font-bold">Competencias Disciplinares de Ingeniería Física Industrial</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-10">
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF0100.svg"
-          alt=""
-          info={{
-            title: "Solución de problemas complejos",
-            description: "Emitido por Ingeniería Física Industrial",
-            details: [
-              { title: "Descripción", content: "SSF0100 - Fundamentos de Seguridad Informática" },
-              { title: "Tags", content: "Análisis de vulnerabilidades, protección de datos, criptografía básica" },
-              { title: "Fecha de Emisión", content: "Mayo 2022" },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF0200.svg"
-          alt=""
-          info={{
-            title: "Construcción de modelos",
-            description: "Emitido por Ingeniería Física Industrial",
-            details: [
-              { title: "Descripción", content: "SSF0200 - Fundamentos de Seguridad Informática" },
-              { title: "Tags", content: "Análisis de vulnerabilidades, protección de datos, criptografía básica" },
-              { title: "Fecha de Emisión", content: "Mayo 2022" },
-            ],
-          }}
-        />
-        <PhotoCard
+      <PhotoCard
           src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF0300.svg"
           alt=""
           info={{
             title: "Caracterización de fenómenos físicos",
             description: "Emitido por Ingeniería Física Industrial",
             details: [
-              { title: "Descripción", content: "SSF0300 - Fundamentos de Seguridad Informática" },
-              { title: "Tags", content: "Análisis de vulnerabilidades, protección de datos, criptografía básica" },
-              { title: "Fecha de Emisión", content: "Mayo 2022" },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF400.svg"
-          alt=""
-          info={{
-            title: "Identificación de fenómenos físicos",
-            description: "Emitido por Ingeniería Física Industrial",
-            details: [
-              { title: "Descripción", content: "SSF400 - Fundamentos de Seguridad Informática" },
-              { title: "Tags", content: "Análisis de vulnerabilidades, protección de datos, criptografía básica" },
-              { title: "Fecha de Emisión", content: "Mayo 2022" },
+              { title: "Descripción", content: "Caracteriza fenómenos físicos de la ciencia fundamental y aplicada, por medio de la realización de experimentos o prototipos." },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
             ],
           }}
         />
@@ -76,9 +37,48 @@ export default function InsigniasAcademicasPage({ onBack }: InsigniasAcademicasP
             title: "Comunicación de información",
             description: "Emitido por Ingeniería Física Industrial",
             details: [
-              { title: "Descripción", content: "SSF0500 - Fundamentos de Seguridad Informática" },
-              { title: "Tags", content: "Análisis de vulnerabilidades, protección de datos, criptografía básica" },
-              { title: "Fecha de Emisión", content: "Mayo 2022" },
+              { title: "Descripción", content: "Comunica información científica y tecnológica en el ámbito de la física e ingeniería física a una diversidad de públicos." },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
+            ],
+          }}
+        />
+        <PhotoCard
+          src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF0200.svg"
+          alt=""
+          info={{
+            title: "Construcción de modelos",
+            description: "Emitido por Ingeniería Física Industrial",
+            details: [
+              { title: "Descripción", content: "Construye modelos matemáticos y computacionales de sistemas físicos, mediante principios de la ciencia fundamental y recursos tecnológicos." },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
+            ],
+          }}
+        />
+        <PhotoCard
+          src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF400.svg"
+          alt=""
+          info={{
+            title: "Identificación de fenómenos físicos",
+            description: "Emitido por Ingeniería Física Industrial",
+            details: [
+              { title: "Descripción", content: "Identifica fenómenos físicos que potencialmente generan oportunidades de innovación científica y tecnológica." },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
+            ],
+          }}
+        />
+        <PhotoCard
+          src="/TecLearnerWallet_Mockup/Insignias Académicas/SSF0100.svg"
+          alt=""
+          info={{
+            title: "Solución de problemas complejos",
+            description: "Emitido por Ingeniería Física Industrial",
+            details: [
+              { title: "Descripción", content: "Resuelve problemas complejos relacionados con fenómenos físicos mediante procedimientos innovadores." },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
             ],
           }}
         />
@@ -92,12 +92,11 @@ export default function InsigniasAcademicasPage({ onBack }: InsigniasAcademicasP
           alt=""
           info={{
             title: "Autoconocimiento y gestión",
-            description: "Otorgada por el Tecnológico de Monterrey",
+            description: "Emitido por Competencias Transversales",
             details: [
-              { title: "Curso", content: "SEG0100 - Fundamentos de Seguridad de la Información" },
-              { title: "Fecha de Emisión", content: "Enero 2023" },
-              { title: "Competencias", content: "Gestión de riesgos, políticas de seguridad, ISO 27001" },
-              { title: "Validez", content: "Certificación digital verificable mediante blockchain" },
+              { title: "Descripción", content: "Construye un proyecto de bienestar personal y profesional a lo largo de la vida mediante una reflexión responsable y la integración de recursos emocionales e intelectuales." },
+              { title: "Tags", content: "Tec de Monterrey, Autoconocimiento, Bienestar y Autorregulación" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
             ],
           }}
         />
@@ -106,26 +105,11 @@ export default function InsigniasAcademicasPage({ onBack }: InsigniasAcademicasP
           alt=""
           info={{
             title: "Emprendimiento innovador",
-            description: "Otorgada por el Tecnológico de Monterrey",
+            description: "Emitido por Competencias Transversales",
             details: [
-              { title: "Curso", content: "SEG0200 - Seguridad Operacional" },
-              { title: "Fecha de Emisión", content: "Febrero 2023" },
-              { title: "Competencias", content: "Monitoreo de seguridad, respuesta a incidentes, SOC" },
-              { title: "Validez", content: "Certificación digital verificable mediante blockchain" },
-            ],
-          }}
-        />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Insignias Académicas/SEG0600.svg"
-          alt=""
-          info={{
-            title: "Comunicación",
-            description: "Otorgada por el Tecnológico de Monterrey",
-            details: [
-              { title: "Curso", content: "SEG0600 - Seguridad Avanzada" },
-              { title: "Fecha de Emisión", content: "Marzo 2023" },
-              { title: "Competencias", content: "Análisis forense, threat hunting, red teaming" },
-              { title: "Validez", content: "Certificación digital verificable mediante blockchain" },
+              { title: "Descripción", content: "Genera soluciones innovadoras y versátiles en entornos cambiantes que crean valor e impactan positivamente a la sociedad." },
+              { title: "Tags", content: "Tec de Monterrey, Emprendimiento Consciente, Innovación" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
             ],
           }}
         />
@@ -137,13 +121,12 @@ export default function InsigniasAcademicasPage({ onBack }: InsigniasAcademicasP
           alt=""
           info={{
             title: "Fotónica y tecnologías cuánticas",
-            description: "Otorgada por el Tecnológico de Monterrey",
+            description: "Emitido por Experiencias Formativas",
             details: [
-              { title: "Curso", content: "F0122 - Fundamentos de Ciberseguridad" },
-              { title: "Fecha de Emisión", content: "Abril 2023" },
-              { title: "Competencias", content: "Principios básicos, amenazas comunes, controles de seguridad" },
-              { title: "Validez", content: "Certificación digital verificable mediante blockchain" },
-            ],
+              { title: "Descripción", content: "Escuela de Ingeniería y Ciencias" },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial, Pensamiento científico, Pensamiento crítico, Implementación de programas, Interpretación de fenómenos físicos, Implementación de experimentos, Diseño de sistemas de adquisición de datos" },
+              { title: "Fecha de Emisión", content: "2024/04/29" },
+              ],
           }}
         />
       </div>

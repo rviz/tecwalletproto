@@ -16,21 +16,16 @@ export default function TitulosAcademicosPage({ onBack }: TitulosAcademicosPageP
         <h2 className="text-4xl font-bold">Título y grados académicos</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Título Universitario/Título_Profesional.png"
           alt="Título Profesional"
           info={{
-            title: "Título Profesional en Ingeniería",
-            description: "Instituto Tecnológico y de Estudios Superiores de Monterrey, 2018-2022",
+            title: "Ingeniero Físico Industrial",
+            description: "Emitido por Tecnologico de Monterrey",
             details: [
-              { title: "Grado", content: "Ingeniero Físico Industrial" },
-              { title: "Fecha de expedición", content: "Junio 2022" },
-              { title: "Cédula Profesional", content: "12345678" },
-              { 
-                title: "Verificación", 
-                content: "Este título cuenta con verificación digital mediante tecnología blockchain" 
-              },
+              { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+              { title: "Fecha de Emisión", content: "2022/06/31" },
             ],
           }}
         />
@@ -38,16 +33,11 @@ export default function TitulosAcademicosPage({ onBack }: TitulosAcademicosPageP
           src="/TecLearnerWallet_Mockup/Título Universitario/Prepa_Verificacion.png"
           alt="Diploma de Preparatoria"
           info={{
-            title: "Diploma de Bachillerato",
-            description: "Prepa Tec, Campus Monterrey, 2015-2018",
+            title: "Bachillerato Programa Multicultural",
+            description: "Emitido por Tecnologico de Monterrey",
             details: [
-              { title: "Programa", content: "Bachillerato Internacional" },
-              { title: "Promedio", content: "95/100" },
-              { title: "Fecha de expedición", content: "Mayo 2021" },
-              { 
-                title: "Verificación", 
-                content: "Este diploma cuenta con verificación digital mediante tecnología blockchain" 
-              },
+              { title: "Tags", content: "Tec de Monterrey, Bachillerato Programa Multicultural" },
+              { title: "Fecha de Emisión", content: "2022/06/31" },
             ],
           }}
         />

@@ -15,42 +15,41 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
         <h2 className="text-4xl font-bold">Educación continua</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <PhotoCard
+          src="/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Insignia.png"
+          alt=""
+          info={{
+            title: "Colaboración y negociación efectiva",
+            description: "Emitido por Tecnologico de Monterrey",
+            details: [
+              { 
+                title: "Descripción", 
+                content: "Los participantes serán capaces de desarrollar habilidades efectivas de colaboración y negociación, así como a comunicarse de manera constructiva, resolver conflictos y alcanzar acuerdos mutuamente beneficiosos en entornos profesionales y personales." 
+              },
+              { title: "Tags", content: "Comunicación efectiva, Integración organizacional, Generación de compromiso organizacional, Trabajo en equipo, Negociación exitosa, Manejo de conflictos" },
+              { title: "Fecha de emisión", content: "2024/11/15" },
+            ],
+          }}
+        />
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Insignia.png"
           alt=""
           info={{
             title: "Psicología positiva y propósito de vida",
-            description: "Tecnológico de Monterrey - Educación Continua",
+            description: "Emitido por Tecnologico de Monterrey",
             details: [
-              { title: "Duración", content: "40 horas" },
-              { title: "Fecha de emisión", content: "Enero 2023" },
-              { title: "Instructor", content: "Dra. María González" },
-              {
-                title: "Habilidades adquiridas",
-                content: "Bienestar psicológico, resiliencia, mindfulness, fortalezas de carácter",
+              { 
+                title: "Descripción", 
+                content: "Los participantes serán capaces de comprender los principios fundamentales de la psicología positiva y aplicarlos para descubrir y cultivar su propósito de vida." 
               },
+              { title: "Tags", content: "Fortalezas personales, Bienestar emocional, Vida positiva, Reconocimiento de emociones, Sentido de vida" },
+              { title: "Fecha de emisión", content: "2024/06/05" },
             ],
           }}
         />
-        <PhotoCard
-          src="/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Insignia.png"
-          alt=""
-          info={{
-            title: "Colaboración y negociación efectiva",
-            description: "Tecnológico de Monterrey - Educación Continua",
-            details: [
-              { title: "Duración", content: "30 horas" },
-              { title: "Fecha de emisión", content: "Marzo 2023" },
-              { title: "Instructor", content: "Dr. Carlos Ramírez" },
-              {
-                title: "Competencias",
-                content: "Trabajo en equipo, comunicación asertiva, resolución de conflictos, liderazgo colaborativo",
-              },
-            ],
-          }}
-        />
-        <PhotoCard
+        
+        {/* <PhotoCard
           src="/TecLearnerWallet_Mockup/Educación Continua/effective-leader.png"
           alt=""
           info={{
@@ -134,7 +133,7 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
               },
             ],
           }}
-        />
+        /> */}
       </div>
     </div>
   )

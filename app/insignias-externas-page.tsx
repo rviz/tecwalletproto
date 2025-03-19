@@ -16,18 +16,16 @@ export default function InsigniasExternasPage({ onBack }: InsigniasExternasPageP
         <h2 className="text-4xl font-bold">Insignias y diplomas externos</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <PhotoCard
           src="/TecLearnerWallet_Mockup/Insignias Externos/PowerBI.png"
           alt=""
           info={{
             title: "PL-300T00A: Microsoft Power BI Data Analyst",
-            description: "Certificación profesional de Microsoft",
+            description: "Emitido por Microsoft",
             details: [
-              { title: "Fecha de obtención", content: "15 de noviembre de 2022" },
-              { title: "Validez", content: "2 años, renovable mediante examen" },
-              { title: "ID de credencial", content: "MS-PBI-DA-78945" },
-              { title: "Competencias", content: "Análisis de datos, visualización, modelado de datos, DAX" },
+              { title: "Descripción", content: "This course covers the various methods and best practices that are in line with business and technical requirements for modeling, visualizing, and analyzing data with Power BI." },
+              { title: "Fecha de emisión", content: "2024/04/10" },
             ],
           }}
         />

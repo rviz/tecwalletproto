@@ -91,7 +91,7 @@ export default function ProfilePage({ onBack }: ProfilePageProps) {
             <Award size={48} className="text-primary" />
             <div>
               <p className="text-2xl text-muted-foreground">Insignias Académicas</p>
-              <p className="text-3xl">9 Insignias</p>
+              <p className="text-3xl">8 Insignias</p>
             </div>
           </div>
           
@@ -99,7 +99,7 @@ export default function ProfilePage({ onBack }: ProfilePageProps) {
             <Award size={48} className="text-primary" />
             <div>
               <p className="text-2xl text-muted-foreground">Educación Continua</p>
-              <p className="text-3xl">7 Certificados</p>
+              <p className="text-3xl">2 Certificados</p>
             </div>
           </div>
           

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Home, User, Wallet, Bell, FileCheck } from "lucide-react"
+import { Home, User, Wallet, Bell, BriefcaseBusiness } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import HomePage from "./home-page"
 import TitulosAcademicosPage from "./titulos-academicos-page"
@@ -9,7 +9,7 @@ import InsigniasAcademicasPage from "./insignias-academicas-page"
 import EducacionContinuaPage from "./educacion-continua-page"
 import InsigniasExternasPage from "./insignias-externas-page"
 import ProfilePage from "./profile-page"
-import VerificationsPage from "./verifications-page"
+import PortafolioPage from "./portafolio-page"
 import { NavButton } from "./components/nav-button"
 
 export default function Dashboard() {
@@ -57,17 +57,17 @@ export default function Dashboard() {
         {activeTab === "home" && activePage === "educacion-continua" && <EducacionContinuaPage onBack={handleBack} />}
         {activeTab === "home" && activePage === "insignias-externas" && <InsigniasExternasPage onBack={handleBack} />}
         {activeTab === "profile" && <ProfilePage onBack={() => handleTabChange("home")} />}
-        {activeTab === "verifications" && <VerificationsPage onBack={() => handleTabChange("home")} />}
+        {activeTab === "portafolio" && <PortafolioPage onBack={() => handleTabChange("home")} />}
       </main>
 
       {/* Bottom Navigation - Mobile App Style */}
       <div className="fixed bottom-0 left-0 right-0 max-w-4xl mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-t-5xl shadow-lg">
         <div className="flex justify-around items-center h-32 px-4">
         <NavButton
-            icon={<FileCheck size={48} />}
-            label="Verificaciones"
-            isActive={activeTab === "verifications"}
-            onClick={() => handleTabChange("verifications")}
+            icon={<BriefcaseBusiness size={48} />}
+            label="Portafolio"
+            isActive={activeTab === "portafolio"}
+            onClick={() => handleTabChange("portafolio")}
           />
           <NavButton
             icon={<Home size={48} />}
