@@ -17,9 +17,12 @@ import {
   DialogContent,
   DialogClose,
   DialogTitle,
-} from "./dialog"
+  DialogDescription,
+  DialogHeader,
+  DialogFooter,
+} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, X } from "lucide-react"
+import { ChevronRight, X, Award, CheckCircle } from "lucide-react"
 
 interface DetailItem {
   title: string
@@ -40,6 +43,15 @@ interface PhotoCardProps {
 export function PhotoCard({ src, alt, info }: PhotoCardProps) {
   const [open, setOpen] = useState(false)
   const [imageDialogOpen, setImageDialogOpen] = useState(false)
+  const [certificateDialogOpen, setCertificateDialogOpen] = useState(false)
+  
+  // Find the emission date from details
+  const getEmissionDate = () => {
+    const dateDetail = info.details.find(d => 
+      d.title === "Fecha de Emisión" || d.title === "Fecha de emisión"
+    )
+    return dateDetail?.content || "Fecha no disponible"
+  }
 
   return (
     <>
@@ -86,7 +98,7 @@ export function PhotoCard({ src, alt, info }: PhotoCardProps) {
               </div>
             </div>
             <DrawerFooter className="px-8 pt-4 pb-12">
-              <Button className="w-full text-xl py-6">Ver Certificado</Button>
+              <Button className="w-full text-xl py-6" onClick={() => setCertificateDialogOpen(true)}>Ver Certificado</Button>
               <DrawerClose asChild>
                 <Button variant="outline" className="w-full text-xl py-6 mt-4">
                   Cerrar
@@ -109,6 +121,61 @@ export function PhotoCard({ src, alt, info }: PhotoCardProps) {
             />
             <DialogClose className="absolute top-4 right-4 bg-black/50 text-white rounded-full p-2 hover:bg-black/70">
               <X className="h-8 w-8" />
+            </DialogClose>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
+      <Dialog open={certificateDialogOpen} onOpenChange={setCertificateDialogOpen}>
+        <DialogContent className="sm:max-w-[800px]">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold flex items-center gap-2">
+              <Award className="h-8 w-8 text-primary" />
+              Verify Badge
+            </DialogTitle>
+            {/* <DialogDescription className="text-xl mt-2">
+              Información del certificado
+            </DialogDescription> */}
+          </DialogHeader>
+          
+          <div className="py-6 space-y-6">
+            <div className="border-b pb-4 flex items-start gap-4">
+              <CheckCircle className="h-10 w-10 text-green-500 flex-shrink-0 mt-1" />
+              <div>
+                <p className="text-3xl font-medium">{info.title}</p>
+                <p className="text-xl text-muted-foreground">This badged has been verified by Canvas Badges and its information is valid.</p>
+              </div>
+            </div>
+
+            <div className="border-b pb-4 flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-medium mb-2">Issued By</h3>
+                <p className="text-2xl text-muted-foreground">{info.description}</p>
+              </div>
+            </div>
+
+            <div className="border-b pb-4 flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-medium mb-2">Expires On</h3>
+                <p className="text-2xl text-muted-foreground">Does not expire</p>
+              </div>
+            </div>
+            
+            <div className="border-b pb-4 flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-medium mb-2">Issued On</h3>
+                <p className="text-2xl text-muted-foreground">{getEmissionDate()}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex flex-col gap-4 px-8 pt-4 pb-12">
+            <Button className="w-full text-xl py-6">Visualizar en Canvas Badges</Button>
+            <DialogClose asChild>
+              <Button variant="outline" className="w-full text-xl py-6">Cerrar</Button>
             </DialogClose>
           </div>
         </DialogContent>

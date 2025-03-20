@@ -20,7 +20,7 @@ import {
   DialogContent,
   DialogClose,
   DialogTitle,
-} from "./components/dialog"
+} from "@/components/ui/dialog"
 
 interface PortafolioPageProps {
   onBack?: () => void
@@ -29,143 +29,194 @@ interface PortafolioPageProps {
 // Sample portafolio data - replace with actual data
 const pendingPortafolio = [
   {
-    id: "ver-001",
-    title: "Insignia Académica - SSF0100",
-    status: "pending",
-    date: "2025-03-10",
+    id: "academic-006",
+    title: "Autoconocimiento y gestión",
+    status: "verified",
+    date: "2024/04/29",
     type: "Insignia Académica",
+    issuer: "Competencias Transversales",
+    details: [
+      { title: "Descripción", content: "Construye un proyecto de bienestar personal y profesional a lo largo de la vida mediante una reflexión responsable y la integración de recursos emocionales e intelectuales." },
+      { title: "Tags", content: "Tec de Monterrey, Autoconocimiento, Bienestar y Autorregulación" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SEG0100.svg"
+  },
+  {
+    id: "edu-002",
+    title: "Psicología positiva y propósito de vida",
+    status: "verified",
+    date: "2024/06/05",
+    type: "Educación Continua",
     issuer: "Tecnológico de Monterrey",
     details: [
-      { title: "Curso", content: "SSF0100 - Fundamentos de Seguridad Informática" },
-      { title: "Fecha de solicitud", content: "10 de marzo de 2025" },
-      { title: "Estatus", content: "En proceso de verificación" },
-      { title: "Tiempo estimado", content: "3-5 días hábiles" },
+      { title: "Descripción", content: "Los participantes serán capaces de comprender los principios fundamentales de la psicología positiva y aplicarlos para descubrir y cultivar su propósito de vida." },
+      { title: "Tags", content: "Fortalezas personales, Bienestar emocional, Vida positiva, Reconocimiento de emociones, Sentido de vida" },
+      { title: "Fecha de emisión", content: "2024/06/05" },
     ],
-    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF0100_Verificación.png"
+    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Insignia.png"
+  },
+  {
+    id: "title-002",
+    title: "Bachillerato Programa Multicultural",
+    status: "verified",
+    date: "2022/06/31",
+    type: "Título Académico",
+    issuer: "Tecnológico de Monterrey",
+    details: [
+      { title: "Tags", content: "Tec de Monterrey, Bachillerato Programa Multicultural" },
+      { title: "Fecha de Emisión", content: "2022/06/31" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Prepa_Verificacion.png"
   }
 ]
 
 const completedPortafolio = [
+  // Títulos Académicos
   {
-    id: "ver-009",
-    title: "Verificación Accredible - Power BI",
+    id: "title-001",
+    title: "Ingeniero Físico Industrial",
     status: "verified",
-    date: "2022-11-15",
-    type: "Insignia Externa",
-    issuer: "Microsoft Learning",
-    details: [
-      { title: "Emisor", content: "Microsoft Learning" },
-      { title: "Fecha de emisión", content: "15 de noviembre de 2022" },
-      { title: "Plataforma", content: "Accredible Certification Platform" },
-      { title: "Estado", content: "Activo y verificado" },
-    ],
-    imageSrc: "/TecLearnerWallet_Mockup/Insignias Externos/PowerBI_Accredible.png"
-  },
-  {
-    id: "ver-010",
-    title: "Verificación de Certificación Power BI",
-    status: "verified",
-    date: "2022-11-15",
-    type: "Insignia Externa",
-    issuer: "Microsoft Certification",
-    details: [
-      { title: "Emisor", content: "Microsoft Certification" },
-      { title: "Fecha de verificación", content: "15 de noviembre de 2022" },
-      { title: "ID de verificación", content: "VER-PBI-2022-11" },
-      { title: "Estado", content: "Verificado y válido" },
-    ],
-    imageSrc: "/TecLearnerWallet_Mockup/Insignias Externos/PowerBI_Verificación.png"
-  },
-  {
-    id: "ver-003",
-    title: "Certificado Blockchain del Título",
-    status: "verified",
-    date: "2022-07-01",
+    date: "2022/06/31",
     type: "Título Académico",
-    issuer: "Instituto Tecnológico y de Estudios Superiores de Monterrey",
+    issuer: "Tecnológico de Monterrey",
     details: [
-      { title: "Emisor", content: "Instituto Tecnológico y de Estudios Superiores de Monterrey" },
-      { title: "Fecha de emisión", content: "Julio 2022" },
-      { title: "Tecnología", content: "Blockcerts v2.0" },
-      { title: "Estado", content: "Verificado y válido" },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+      { title: "Fecha de Emisión", content: "2022/06/31" },
     ],
-    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Titulo_Blockcerts.png"
+    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Título_Profesional.png"
+  },
+  // Insignias Académicas
+  {
+    id: "academic-001",
+    title: "Caracterización de fenómenos físicos",
+    status: "verified",
+    date: "2024/04/29",
+    issuer: "Ingeniería Física Industrial",
+    details: [
+      { title: "Descripción", content: "Caracteriza fenómenos físicos de la ciencia fundamental y aplicada, por medio de la realización de experimentos o prototipos." },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF0300.svg"
   },
   {
-    id: "ver-004",
-    title: "Verificación de Título Profesional",
+    id: "academic-002",
+    title: "Comunicación de información",
     status: "verified",
-    date: "2022-07-15",
-    type: "Título Académico",
-    issuer: "Secretaría de Educación Pública",
+    date: "2024/04/29",
+    type: "Insignia Académica",
+    issuer: "Ingeniería Física Industrial",
     details: [
-      { title: "Institución verificadora", content: "Secretaría de Educación Pública" },
-      { title: "Fecha de verificación", content: "Julio 2022" },
-      { title: "ID de verificación", content: "VER-2022-07-15-001" },
-      { title: "Estado", content: "Documento auténtico y válido" },
+      { title: "Descripción", content: "Comunica información científica y tecnológica en el ámbito de la física e ingeniería física a una diversidad de públicos." },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
     ],
-    imageSrc: "/TecLearnerWallet_Mockup/Título Universitario/Titulo_Verificación.png"
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF0500.svg"
   },
   {
-    id: "ver-005",
-    title: "Verificación de Certificado en Psicología Positiva",
+    id: "academic-003",
+    title: "Construcción de modelos",
     status: "verified",
-    date: "2023-01-15",
+    date: "2024/04/29",
+    type: "Insignia Académica",
+    issuer: "Ingeniería Física Industrial",
+    details: [
+      { title: "Descripción", content: "Construye modelos matemáticos y computacionales de sistemas físicos, mediante principios de la ciencia fundamental y recursos tecnológicos." },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF0200.svg"
+  },
+  {
+    id: "academic-004",
+    title: "Identificación de fenómenos físicos",
+    status: "verified",
+    date: "2024/04/29",
+    type: "Insignia Académica",
+    issuer: "Ingeniería Física Industrial",
+    details: [
+      { title: "Descripción", content: "Identifica fenómenos físicos que potencialmente generan oportunidades de innovación científica y tecnológica." },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF400.svg"
+  },
+  {
+    id: "academic-005",
+    title: "Solución de problemas complejos",
+    status: "verified",
+    date: "2024/04/29",
+    type: "Insignia Académica",
+    issuer: "Ingeniería Física Industrial",
+    details: [
+      { title: "Descripción", content: "Resuelve problemas complejos relacionados con fenómenos físicos mediante procedimientos innovadores." },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SSF0100.svg"
+  },
+  {
+    id: "academic-007",
+    title: "Emprendimiento innovador",
+    status: "verified",
+    date: "2024/04/29",
+    type: "Insignia Académica",
+    issuer: "Competencias Transversales",
+    details: [
+      { title: "Descripción", content: "Genera soluciones innovadoras y versátiles en entornos cambiantes que crean valor e impactan positivamente a la sociedad." },
+      { title: "Tags", content: "Tec de Monterrey, Emprendimiento Consciente, Innovación" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/SEG0200.svg"
+  },
+  {
+    id: "academic-008",
+    title: "Fotónica y tecnologías cuánticas",
+    status: "verified",
+    date: "2024/04/29",
+    type: "Insignia Académica",
+    issuer: "Experiencias Formativas",
+    details: [
+      { title: "Descripción", content: "Escuela de Ingeniería y Ciencias" },
+      { title: "Tags", content: "Tec de Monterrey, Ingeniería en Física Industrial, Pensamiento científico, Pensamiento crítico, Implementación de programas, Interpretación de fenómenos físicos, Implementación de experimentos, Diseño de sistemas de adquisición de datos" },
+      { title: "Fecha de Emisión", content: "2024/04/29" },
+    ],
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Académicas/F0122.svg"
+  },
+
+  // Educación Continua
+  {
+    id: "edu-001",
+    title: "Colaboración y negociación efectiva",
+    status: "verified",
+    date: "2024/11/15",
     type: "Educación Continua",
     issuer: "Tecnológico de Monterrey",
     details: [
-      { title: "Emisor", content: "Tecnológico de Monterrey" },
-      { title: "Fecha de verificación", content: "Enero 2023" },
-      { title: "ID de verificación", content: "VER-PP-2023-01" },
-      { title: "Estado", content: "Verificado y válido" },
+      { title: "Descripción", content: "Los participantes serán capaces de desarrollar habilidades efectivas de colaboración y negociación, así como a comunicarse de manera constructiva, resolver conflictos y alcanzar acuerdos mutuamente beneficiosos en entornos profesionales y personales." },
+      { title: "Tags", content: "Comunicación efectiva, Integración organizacional, Generación de compromiso organizacional, Trabajo en equipo, Negociación exitosa, Manejo de conflictos" },
+      { title: "Fecha de emisión", content: "2024/11/15" },
     ],
-    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Verificación.png"
+    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Insignia.png"
   },
+
+  // Insignias Externas
   {
-    id: "ver-006",
-    title: "Verificación de Certificado en Colaboración Efectiva",
+    id: "external-001",
+    title: "PL-300T00A: Microsoft Power BI Data Analyst",
     status: "verified",
-    date: "2023-03-15",
-    type: "Educación Continua",
-    issuer: "Tecnológico de Monterrey",
+    date: "2024/04/10",
+    type: "Insignia Externa",
+    issuer: "Microsoft",
     details: [
-      { title: "Emisor", content: "Tecnológico de Monterrey" },
-      { title: "Fecha de verificación", content: "Marzo 2023" },
-      { title: "ID de verificación", content: "VER-CE-2023-03" },
-      { title: "Estado", content: "Verificado y válido" },
+      { title: "Descripción", content: "This course covers the various methods and best practices that are in line with business and technical requirements for modeling, visualizing, and analyzing data with Power BI." },
+      { title: "Fecha de emisión", content: "2024/04/10" },
     ],
-    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Verificación.png"
+    imageSrc: "/TecLearnerWallet_Mockup/Insignias Externos/PowerBI.png"
   },
-  {
-    id: "ver-007",
-    title: "Credencial Accredible - Psicología Positiva",
-    status: "verified",
-    date: "2023-01-10",
-    type: "Educación Continua",
-    issuer: "Tecnológico de Monterrey",
-    details: [
-      { title: "Emisor", content: "Tecnológico de Monterrey" },
-      { title: "Fecha de emisión", content: "Enero 2023" },
-      { title: "Plataforma", content: "Accredible Certification Platform" },
-      { title: "Estado", content: "Activo y verificado" },
-    ],
-    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/PsicologíaPositiva_Accredible.png"
-  },
-  {
-    id: "ver-008",
-    title: "Credencial Accredible - Colaboración Efectiva",
-    status: "verified",
-    date: "2023-03-10",
-    type: "Educación Continua",
-    issuer: "Tecnológico de Monterrey",
-    details: [
-      { title: "Emisor", content: "Tecnológico de Monterrey" },
-      { title: "Fecha de emisión", content: "Marzo 2023" },
-      { title: "Plataforma", content: "Accredible Certification Platform" },
-      { title: "Estado", content: "Activo y verificado" },
-    ],
-    imageSrc: "/TecLearnerWallet_Mockup/Educación Continua/Colaboración_Accredible.png"
-  }
+
+  
 ]
 
 export default function PortafolioPage({ onBack }: PortafolioPageProps) {
@@ -193,13 +244,13 @@ export default function PortafolioPage({ onBack }: PortafolioPageProps) {
             onClick={() => setActiveTab("completed")}
             className={`flex-1 text-4xl py-6 font-medium ${activeTab === "completed" ? "border-b-2 border-primary text-primary" : "text-gray-500"}`}
           >
-            Completadas ({completedPortafolio.length})
+            Para empleadores ({completedPortafolio.length})
           </button>
           <button
             onClick={() => setActiveTab("pending")}
             className={`flex-1 text-4xl py-6 font-medium ${activeTab === "pending" ? "border-b-2 border-primary text-primary" : "text-gray-500"}`}
           >
-            Pendientes ({pendingPortafolio.length})
+            Sin asignar ({pendingPortafolio.length})
           </button>
         </div>
         
@@ -282,15 +333,12 @@ export default function PortafolioPage({ onBack }: PortafolioPageProps) {
                       <span 
                         className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-xl font-medium"
                       >
-                        Verificado
+                        Asignado
                       </span>
                     </div>
-                    <div className="text-2xl text-gray-500 mt-2">
-                      <span className="mr-4">{portafolio.type}</span>
-                      <span>•</span>
-                      <span className="mx-4">{portafolio.issuer}</span>
-                      <span>•</span>
-                      <span className="ml-4">{portafolio.date}</span>
+                    <div className="flex flex-col text-2xl text-gray-500 mt-2">
+                      <span className="mb-1">{portafolio.issuer}</span>
+                      <span>{portafolio.date}</span>
                     </div>
                   </div>
                   <ChevronRight className="h-12 w-12 text-gray-400 flex-shrink-0 ml-4" />
