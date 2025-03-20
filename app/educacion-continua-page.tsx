@@ -11,7 +11,6 @@ export default function EducacionContinuaPage({ onBack }: EducacionContinuaPageP
   return (
     <div className="relative space-y-16">
       <div className="flex items-center justify-between">
-        {onBack && <BackButton onClick={onBack} />}
         <h2 className="text-4xl font-bold">Educación continua</h2>
       </div>
 

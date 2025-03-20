@@ -10,10 +10,10 @@ interface ProfilePageProps {
 
 export default function ProfilePage({ onBack }: ProfilePageProps) {
   return (
-    <div className="relative space-y-16">
+    <div className="relative space-y-8 pb-16">
       
       <div className="flex items-center justify-between">
-        <h2 className="text-4xl font-bold">Mi Perfil</h2>
+        <h2 className="text-4xl font-bold">Perfil de Usuario</h2>
       </div>
 
       <div className="flex flex-col items-center">

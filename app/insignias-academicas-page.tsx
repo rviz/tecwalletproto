@@ -11,7 +11,7 @@ export default function InsigniasAcademicasPage({ onBack }: InsigniasAcademicasP
   return (
     <div className="relative space-y-8">
       <div className="flex items-center justify-between">
-        {onBack && <BackButton onClick={onBack} />}
+        {/* Back button removed as it's now integrated in the header */}
       </div>
 
       <h2 className="text-4xl font-bold">Competencias Disciplinares de Ingeniería Física Industrial</h2>

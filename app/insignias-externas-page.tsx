@@ -10,8 +10,6 @@ interface InsigniasExternasPageProps {
 export default function InsigniasExternasPage({ onBack }: InsigniasExternasPageProps) {
   return (
     <div className="relative space-y-12">
-      {onBack && <BackButton onClick={onBack} />}
-      
       <div className="flex items-center justify-between">
         <h2 className="text-4xl font-bold">Insignias y diplomas externos</h2>
       </div>

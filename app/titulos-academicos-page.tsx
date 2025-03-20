@@ -1,7 +1,6 @@
 "use client"
 
 import { PhotoCard } from "./components/photo-card"
-import { BackButton } from "./components/back-button"
 
 interface TitulosAcademicosPageProps {
   onBack?: () => void
@@ -10,8 +9,6 @@ interface TitulosAcademicosPageProps {
 export default function TitulosAcademicosPage({ onBack }: TitulosAcademicosPageProps) {
   return (
     <div className="relative space-y-12">
-      {onBack && <BackButton onClick={onBack} />}
-      
       <div className="flex items-center justify-between">
         <h2 className="text-4xl font-bold">Título y grados académicos</h2>
       </div>

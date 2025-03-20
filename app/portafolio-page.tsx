@@ -233,7 +233,6 @@ export default function PortafolioPage({ onBack }: PortafolioPageProps) {
   return (
     <div className="relative space-y-8">
       <div className="flex items-center justify-between">
-        {onBack && <BackButton onClick={onBack} />}
         <h2 className="text-4xl font-bold">Portafolios</h2>
       </div>
 

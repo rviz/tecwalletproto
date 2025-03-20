@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Home, User, Wallet, Bell, BriefcaseBusiness } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Home, User, Wallet, Bell, BriefcaseBusiness, ArrowLeft } from "lucide-react"
 import HomePage from "./home-page"
 import TitulosAcademicosPage from "./titulos-academicos-page"
 import InsigniasAcademicasPage from "./insignias-academicas-page"
@@ -37,15 +36,26 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 max-w-4xl mx-auto relative overflow-hidden">
+    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 mx-auto relative overflow-hidden">
       {/* Status Bar - Mobile App Style */}
       <div className="bg-[#452BE0] h-12 w-full"></div>
       
       {/* Top Bar */}
       <div className="bg-[#452BE0] text-white p-8 flex justify-between items-center">
-        <div>
-          <h1 className="text-6xl font-bold">Tec Learner Wallet</h1>
-          <p className="text-3xl text-white/80 mt-2">Credenciales Académicas</p>
+        <div className="flex items-center gap-4">
+          {/* Show back button when on a subpage or non-home tab */}
+          {(activePage || activeTab !== "home") && (
+            <button 
+              onClick={activeTab !== "home" ? () => handleTabChange("home") : handleBack}
+              className="text-white p-2 rounded-full hover:bg-white/10"
+            >
+              <ArrowLeft size={32} />
+            </button>
+          )}
+          <div>
+            <h1 className="text-6xl font-bold">Tec Learner Wallet</h1>
+            <p className="text-3xl text-white/80 mt-2">Credenciales Académicas</p>
+          </div>
         </div>
       </div>
 
@@ -61,7 +71,7 @@ export default function Dashboard() {
       </main>
 
       {/* Bottom Navigation - Mobile App Style */}
-      <div className="fixed bottom-0 left-0 right-0 max-w-4xl mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-t-5xl shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-t-5xl shadow-lg">
         <div className="flex justify-around items-center h-32 px-4">
         <NavButton
             icon={<BriefcaseBusiness size={48} />}
