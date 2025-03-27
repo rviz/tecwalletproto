@@ -57,6 +57,15 @@ export default function Dashboard() {
             <p className="text-3xl text-white/80 mt-2">Credenciales Académicas</p>
           </div>
         </div>
+        
+        {/* Go back to Genially button */}
+        <button 
+          onClick={() => window.history.back()}
+          className="bg-white/10 hover:bg-white/20 text-white text-2xl font-medium py-3 px-6 rounded-full transition-all flex items-center gap-2"
+        >
+          <ArrowLeft size={20} />
+          Go back to Genially
+        </button>
       </div>
 
       {/* Main Content */}
